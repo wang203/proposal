@@ -21,7 +21,7 @@
 \newcommand{\rebuttal}[1]{#1}
 
 %data for Title Page
-\title{}
+\title{Web-scale Visual Content Mining with Computer Vision Methods}
 \author{}
 \date{}
 
@@ -53,6 +53,15 @@
 %\end{preface}
 
 \begin{abstract}
+Social media provides low-cost and easy access to a large number of images with a wide variety of visual content. With this new source of large-scale image data, there is a critical demand for novel, scalable methods that can understand the information behind the visual content. For example, photos shared on social media are usually accompanied with temporal and location metadata, user profiles and textual annotations. When we integrate the visual content by user profiles or location tags, we can estimate a large variety of information. For example, we can help research in Psychology when we are interested in the human beings who take these photos and in Ecology when we are interested in the natural scenes as the visual content. This thesis introduces three projects: a cloud based robotic system testing the feasibility of a memory and computing consuming task to work in near real time; a data mining application supporting Psychology research in gender differences in preference of color; and a natural event tracking system on a continental scale.
+We design and implement a cloud based system to apply these algorithms for object detection and recognition with the best precision in near real time. We test our method on an aerial autonomous vehicle.
+We take advantage of this new data source for psychology research. Based on the color pixels of these photos, we analyze the gender difference in color preference. We study the distribution of color pixels with respect to genders of photographers across geographic locations and content. We find strong sex differences for the predominant reddish and bluish hues, with female users uploading more photographs containing more reddish pixels and male users uploading more photographs containing more bluish pixels.  Furthermore, we take Google Street View to represent the color distribution in the environment, and compare with Flickr photos in three popular outdoor locations. We observe the overall preference of saturated color and reddish color of human compared to the environment.
+By mining visual content on social media websites web-scale images further benefit studies about the state of nature. We develop and evaluate three models to study ecology phenomena such as snow and vegetation coverage.
+First, we learn a binomial distribution to model the probability of the appearance of a natural phenomenon based on the number of users uploading images with and without the target phenomenon. 
+Then, we compute the histogram of the confidence of each image being a positive evidence. Based on this histogram, we learn a classification model for the confidence of each user, and similarly apply this method to build a histogram of user confidence in order to predict for each time and location.
+Finally, inspired by the study of multiple instance learning, we propose an end to end system taking a sequence of images as input and giving predictions as the final output of this holistic system. For the main challenge of multiple instance learning, we use a network to aggregate a bag of evidence. This process will happen twice, once for users and once for each day and location. The two aggregating processes are optimized simultaneously.
+
+
 % Egocentric cameras aim to approximate a person's field of view, which provides insight into how people interact with the world. Consequently, many cognitive researchers are interested in using wearable camera systems as tools to study attention, perception, and learning. These systems typically capture vast amounts of image data, so to fully harness the potential of this novel observational paradigm, sophisticated techniques to automatically annotate and understand the data are needed. However, analyzing first-person imagery introduces many unique challenges, as it is usually recorded passively
 % %or unintentionally
 % without artistic intent and therefore lacks many of the clean characteristics of traditional photography.
