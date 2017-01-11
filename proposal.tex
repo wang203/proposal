@@ -66,15 +66,6 @@ First, we learn a binomial distribution to model the probability of the appearan
 Then, we compute the histogram of the confidence of each image being a positive evidence. Based on this histogram, we learn a classification model for the confidence of each user, and similarly apply this method to predict for each time and location.
 Finally, inspired by the study of multiple instance learning, we propose an end to end system taking a sequence of images as input and giving predictions as the final output of this holistic system. This process will happen twice, once for users and once for each day and location. The two aggregating processes are optimized simultaneously.
 
-
-% Egocentric cameras aim to approximate a person's field of view, which provides insight into how people interact with the world. Consequently, many cognitive researchers are interested in using wearable camera systems as tools to study attention, perception, and learning. These systems typically capture vast amounts of image data, so to fully harness the potential of this novel observational paradigm, sophisticated techniques to automatically annotate and understand the data are needed. However, analyzing first-person imagery introduces many unique challenges, as it is usually recorded passively
-% %or unintentionally
-% without artistic intent and therefore lacks many of the clean characteristics of traditional photography.
-% 
-% This thesis presents novel computer vision approaches to automatically analyze first-person imaging data. The focus of these approaches lies in extracting and understanding hands in the egocentric field of view. Hands are almost omnipresent and constitute our primary channel of interaction with the physical world. To that end, we argue that analyzing hands is an important factor towards the goal of automatically understanding human behavior from egocentric images and videos.
-% We propose three different approaches that aim to extract meaningful and useful information about hands in the context of social interactions. First, we consider laboratory videos of joint toy play between infants and parents, and develop a method to track and, importantly, distinguish hands based on spatial constraints imposed by the egocentric paradigm. This method allows us collect fine-grained hand appearance statistics that contribute new evidence towards how infants and their parents coordinate attention through eye-hand coordination.
-% Next, we build upon this approach to develop a generalized, probabilistic framework that jointly models temporal and spatial biases of hand locations. We demonstrate that this approach achieves notable results in disambiguating hands even when combined with noisy initial detections that may occur in naturalistic videos.
-% Finally, we ask to what extent we can identify hand types and poses directly based on visual appearances. We collect a large-scale egocentric video dataset with pixel-level hand annotations to permit the training of data-driven recognition models like convolutional neural networks. Results indicate that not only can we distinguish hands, but also infer activities from hand poses.
 \end{abstract}
 
 \tableofcontents
@@ -82,8 +73,8 @@ Finally, inspired by the study of multiple instance learning, we propose an end 
 \chapter{Introduction}
 \input{intro}
 
-% \chapter{Analyzing Hands in Infants' Egocentric Views}
-% Bla Bla Bla
+\chapter{Real-time, Cloud-based Ojbect Detection for Unmanned Aerial Vehicles}
+\input{chapter2}
 % 
 % \chapter{A Probabilistic Framework to Distinguish Hands}
 % Bla Bla Bla
