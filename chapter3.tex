@@ -1,0 +1,42 @@
+\setion{Introduction}
+Variation in human color preferences across cultures and sexes has not been well characterized. The majority of past studies have worked with relatively small samples of participants asked to make explicit decisions with limited stimuli consisting of blocks of single colors. 
+Using this method, Hurlbert and Ling ~\cite{} found a universal preference for bluish hues, along with a greater cross-cultural female preference for reddish hues.
+They gave an evolutionary explanation related to the adaptive benefit to foraging females of seeking out a red object on a green background (e.g., fruit against leaves).  
+Palmer and Schloss ~\cite{} argued that color preferences can be explained in terms of object preferences and associations between objects and colors, which can be influenced by evolution, culture, and individual experience.  The question of sex differences was left open in this paper.
+
+We propose that large-scale novel data-mining of images available on the Web can overcome the limitation of study sizes. Moreover, the metadata associated with the web-scale images provides more interesting information for our complimentary studies.
+When people upload their photos to social networks, they are sharing information about which scenes and types of photos they prefer.
+By analyzing the color spectra over 15 million photographs on Flickr, an online photo-sharing network, we measure male and female preferences in an implicit (behavior-based) rather than explicit (ratings-based) manner and on a much larger scale than can be done in a lab experiment.
+We find strong sex differences for the predominant reddish and bluish hues, with female users uploading more photographs containing more reddish pixels and male users uploading more photographs containing more bluish pixels.
+To take a step towards exploring the reason for this difference and the relation of content preference and color preference, we analyze the least entropy textual tags used by photographers taking photos with most amount of color pixels in each hue interval. Furthermore, we take Google Street View to represent the color distribution in the environment, and compare with Flickr photos in three popular outdoor locations. We study the color distribution and observe the overall preference of saturated color and reddish color of human compared to the environment.
+
+\section{Differences in Color Distributions on Flickr}
+To characterize each photo's color distribution, we consider color histograms in CIE L*C*h* (LCh) color space representing each pixel in a perceptually-uniform space according to Lightness, Chroma, and Hue dimensions.
+Here we focus only on the Hue dimension, dividing it evenly into 65 discrete bins.
+Each photo is first converted into a histogram of the distribution of pixels over hue angle. We then normalize the histogram by user, and take the histograms of all users from a particular population (e.g., men) and combine them into a single aggregated histogram.
+
+We first analyze a general dataset with a larger number of images and without any constraint on content, photographer or location where the photos are taken.
+We collected data for about 150 million publicly-available images from Flickr using the public API, as well as public profile information (including gender) for each photographer. We then downloaded a random subset of 15 million photographs taken by 2.8 million photographers.
+Preliminary results indicate strong overall sex differences for the predominant reddish and bluish hues, with women uploading more photos with more reddish pixels and men uploading more photos with more bluish pixels (see Fig ~\ref{fig:random}).  
+
+To allow more careful examination of how preferences vary across content and geo-locations, we also downloaded: (1) photos of people uploaded to the Flickr Allpeople group 
+%~\cite{https://www.flickr.com/groups/allpeople/} 
+with at least one human figure on it from 22141 female and 39025 male photographers, and (2) photos geo-tagged within three specific places: Death Valley National Park (with 376 female and 2435 male users), San Diego Balboa Park (with 765 female and 2646 male users), and Disneyland (with 1184 female and 3279 male users).
+In Fig ~ref{fig:peoplelocations}, we can find the results from all of the four datasets generally support the preliminary results. 
+That is, the difference in reddish and bluish color preference between genders is consistant across content and geo-locations.
+
+In addition to directly analyzing the hue distribution of pixels, another experiment presenting in Fig ~\ref{fig:user} also supports our results by examining the distribution of users with ``preference'' of colors along the hue axis.
+According to Random dataset, we present the number of users with respect to genders sharing photos with more than $10\%$ pixels in each of the 65 color bins showing the consistent result of gender preference on reddish and bluish color.
+
+\section{Genders Preference on Contents}
+
+
+
+\section{Color Distribution of Flickr vs. Street View}
+\subsdction{Data}
+To measure color distributions in the environment, we also collected data from Google Street View. 
+For each geotagged Flickr photo, we query the Google Street View Image API with its GPS information, and download Street View images in 4 view angles (0, 90, 180, 270 degree). If there are no Street View images available for a GPS location, we discard the corresponding Flickr photo.
+\subsection{Method}
+Palmer 32 colors: These are 32 evenly-speed color points in LCh space, including eight hues in each of two lightness and two chroma values (giving Light, Muted, Dark, and Saturated variants of each hue).
+
+
