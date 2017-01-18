@@ -1,4 +1,4 @@
-\setion{Introduction}
+\section{Introduction}
 Variation in human color preferences across cultures and sexes has not been well characterized. The majority of past studies have worked with relatively small samples of participants asked to make explicit decisions with limited stimuli consisting of blocks of single colors. 
 Using this method, Hurlbert and Ling ~\cite{} found a universal preference for bluish hues, along with a greater cross-cultural female preference for reddish hues.
 They gave an evolutionary explanation related to the adaptive benefit to foraging females of seeking out a red object on a green background (e.g., fruit against leaves).  
@@ -23,20 +23,31 @@ To allow more careful examination of how preferences vary across content and geo
 %~\cite{https://www.flickr.com/groups/allpeople/} 
 with at least one human figure on it from 22141 female and 39025 male photographers, and (2) photos geo-tagged within three specific places: Death Valley National Park (with 376 female and 2435 male users), San Diego Balboa Park (with 765 female and 2646 male users), and Disneyland (with 1184 female and 3279 male users).
 In Fig ~ref{fig:peoplelocations}, we can find the results from all of the four datasets generally support the preliminary results. 
-That is, the difference in reddish and bluish color preference between genders is consistant across content and geo-locations.
+That is, the difference in reddish and bluish color preference between genders is consistent across content and geo-locations.
 
 In addition to directly analyzing the hue distribution of pixels, another experiment presenting in Fig ~\ref{fig:user} also supports our results by examining the distribution of users with ``preference'' of colors along the hue axis.
 According to Random dataset, we present the number of users with respect to genders sharing photos with more than $10\%$ pixels in each of the 65 color bins showing the consistent result of gender preference on reddish and bluish color.
 
 \section{Genders Preference on Contents}
 
+To give a general idea of what content people take pictures of when they prefer certain colors, we perform a further experiment. Generally people would like to tag their images with the occasion, names of people in the picture and their most interested objects. Therefore, we consider the image tags to represent the content of images.
 
+We rank all the tags appearing in 15 million images in the Random dataset, normalized by users, to find the 500 most frequently used tags. 
+To better visualize the tag distribution, we adopt the hue space of Palmer 32 colors~\cite{}. These are 32 evenly-speed color points in LCh space, including eight hues in each of two lightness and two chroma values (giving Light, Muted, Dark, and Saturated variants of each hue).
+
+We find images containing more than $10\%$ pixels of each of the 8 hues.
+In these images, we aggregate them to users. So each tag used multiple times in images from one user, is only counted once. 
+In this way, we compute the tag frequency and entropy across 8 hue centers, for all users, and for male and female users respectively.
+We compose the tag distribution maps in two ways.
+Firstly, for each hue, find the top 10 most frequently used tags and sort them by the least entropy, with female user tags on top, male users in the middle and all users at the bottom.
+In the second way, the top 500 tags are sorted by entropy value first. Along this list, we find 10 most frequently used tags for each hue. This plot is presented in Fig. ~\ref{fig:tag} in the same way as the first plot.
 
 \section{Color Distribution of Flickr vs. Street View}
-\subsdction{Data}
-To measure color distributions in the environment, we also collected data from Google Street View. 
+The next research question we address is the difference between Flickr photos and the environment where the photographers could have taken pictures. 
+We plot the color distribution in histogram of Palmer 32 colors.
+
+To estimate color distributions in the environment, we collect data from Google Street View.
 For each geotagged Flickr photo, we query the Google Street View Image API with its GPS information, and download Street View images in 4 view angles (0, 90, 180, 270 degree). If there are no Street View images available for a GPS location, we discard the corresponding Flickr photo.
-\subsection{Method}
-Palmer 32 colors: These are 32 evenly-speed color points in LCh space, including eight hues in each of two lightness and two chroma values (giving Light, Muted, Dark, and Saturated variants of each hue).
 
-
+The result turns out to be very interesting in respect to locations. In Fig. ~\ref{fig:street}, we present the results of three locations of Death Valley National Park, Disneyland at Los Angeles and San Diego Balboa Park. 
+In general, we observe the preference of saturated color and reddish color of human compared to the environment.
