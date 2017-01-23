@@ -37,13 +37,13 @@ According to Random dataset, we present the number of users with respect to gend
 
 \begin{figure*}[th]
 \centering
-\begin{tabular}{c c c c}
-\includegraphics[width=0.25\textwidth]{figures/chapter3/allpeoplehuesmall.jpg} &
-\includegraphics[width=0.25\textwidth]{figures/chapter3/deathvallyhuesmall.jpg} &
-\includegraphics[width=0.25\textwidth]{figures/chapter3/disneyhuesmall.jpg} &
-\includegraphics[width=0.25\textwidth]{figures/chapter3/sdzoohuesmall.jpg} \\
+\begin{tabular}{c c}
+\includegraphics[width=0.45\textwidth]{figures/chapter3/allpeoplehuesmall.jpg} &
+\includegraphics[width=0.45\textwidth]{figures/chapter3/deathvallyhuesmall.jpg} \\
 (a) Allpeople dataset&
-(b) Death Valley National Park&
+(b) Death Valley National Park\\
+\\
+\includegraphics[width=0.45\textwidth]{figures/chapter3/disneyhuesmall.jpg} &\includegraphics[width=0.45\textwidth]{figures/chapter3/sdzoohuesmall.jpg} \\
 (c) Disneyland in Los Angelos&
 (d) San Diego Balboa Park\\
 \end{tabular}
@@ -75,13 +75,13 @@ In the second way, the top 500 tags are sorted by entropy value first. Along thi
 \begin{figure*}[th]
 \centering
 \begin{tabular}{c}
-\includegraphics[width=0.25\textwidth]{figures/chapter3/tag1.png} \\
+\includegraphics[width=0.65\textwidth]{figures/chapter3/tag1.png} \\
 (a) Frequency tag distribution sorted by entropy ascendingly.\\
-\includegraphics[width=0.25\textwidth]{figures/chapter3/tag2.png} \\
+\includegraphics[width=0.65\textwidth]{figures/chapter3/tag2.png} \\
 (b) Frequency tag distribution sorted by overall tag entropy.\\
 \end{tabular}
 \caption{Most concentrated tags on each Palmer color hue for female and male users.}
-\label{fig:allpeople3locations}
+\label{fig:tag}
 \end{figure*}
 
 
@@ -98,23 +98,17 @@ For each geotagged Flickr photo, we query the Google Street View Image API with 
 The result turns out to be very interesting in respect to locations. In Fig. ~\ref{fig:street}, we present the results of three locations of Death Valley National Park, Disneyland at Los Angeles and San Diego Balboa Park. 
 In general, we observe the preference of saturated color and reddish color of human compared to the environment.
 
-\begin{figure*}[th]
+\begin{figure*}
 \centering
-\begin{tabular}{c c c}
-\includegraphics[width=0.25\textwidth]{figures/chapter3/deathvalleyflkstr.png} \\
-\includegraphics[width=0.25\textwidth]{figures/chapter3/disneyflkstr.png} \\
-\includegraphics[width=0.25\textwidth]{figures/chapter3/sdzooflkstr.png} \\
-(a) Color of Flickr and Street View in Deathvalley National Park. It shows photographers prefer warm color in general even when there are very few warm color objects around.\\
-(b) Color of Flickr and Street View in DisneyLand at Los Angeles. There is clearly more warm color and more saturated color to see in Disneyland so that we see a clearer preference of the photographers.\\
-(c) Color of Flickr and Street View in San Diego Balboa Park. In this very green place, people do not  show as much interest in greenish objects.\\
+\begin{tabular}{m{0.6\linewidth}}
+\includegraphics[width=0.55\textwidth]{figures/chapter3/deathvalleyflkstr.png} \\
+(a) Deathvalley National Park. It shows photographers prefer warm color in general.\\
+\includegraphics[width=0.55\textwidth]{figures/chapter3/disneyflkstr.png} \\
+(b) DisneyLand at Los Angeles. There is more warm color and more saturated color to see in Disneyland so that we see a clearer preference of the photographers.\\
+\includegraphics[width=0.55\textwidth]{figures/chapter3/sdzooflkstr.png} \\
+(c) San Diego Balboa Park. In this very green place, we observe that people do not show as much interest in greenish objects.\\
 \end{tabular}
 \caption{Comparison of hue distribution in Palmer's 32 colors for flickr photos and the Google Street View images at the same GPS lcoation.}
 \label{fig:street}
 \end{figure*}
 
-\begin{figure}[t]
- \centering
-    \includegraphics[width=0.489\textwidth]{figures/chapter3/topusergender.jpeg}
- \caption{Number of users with more than $10\%$ color pixels in each color bin (according to Allpeople dataset) showing the consistaent result of gender preference on redish and bluish color.}
- \label{fig:user}
-\end{figure}
